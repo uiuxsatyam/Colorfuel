@@ -10,15 +10,7 @@ void main() async {
   await Hive.initFlutter();
   await Hive.openBox('gallery');
   
-  runApp(
-    MultiProvider(
-      providers: [
-        // Add providers here as needed
-        // ChangeNotifierProvider(create: (_) => DrawingState()),
-      ],
-      child: const ColoringApp(),
-    ),
-  );
+  runApp(const ColoringApp());
 }
 
 class ColoringApp extends StatelessWidget {
@@ -39,7 +31,7 @@ class ColoringApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: const Color(0xFFFCE4EC),
         fontFamily: 'Roboto', // Defaulting to Roboto
-        cardTheme: CardTheme(
+        cardTheme: CardThemeData(
           elevation: 4,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(24),

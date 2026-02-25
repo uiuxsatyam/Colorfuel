@@ -4,6 +4,7 @@ import 'package:flutter/rendering.dart';
 import 'dart:typed_data';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
+import 'package:hive/hive.dart';
 import '../models/drawing_point.dart';
 
 class DrawScreen extends StatefulWidget {
